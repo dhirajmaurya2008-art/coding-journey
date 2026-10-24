@@ -47,10 +47,10 @@ public:
 
 int main()
 {
-    Employee harry(1), rohan(2);
-    cout << harry.salary << endl;
+    Employee dhiraj(1), harsh(2);
+    cout << dhiraj.salary << endl;
     ;
-    cout << rohan.salary << endl;
+    cout << harsh.salary << endl;
     ;
 
     Programmer skillF(10);
