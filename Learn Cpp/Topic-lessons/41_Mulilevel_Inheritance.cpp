@@ -65,10 +65,10 @@ int main()
         2.ABC is called Inheritance Path 
     */
    
-    Result harry;
-    harry.set_rollnumber(420);
-    harry.set_marks(94.0, 90.0);
-    harry.display();
+    Result drdoom;
+    drdoom.set_rollnumber(420);
+    drdoom.set_marks(94.0, 90.0);
+    drdoom.display();
 
     return 0;
 }
