@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Variables Example</title>
+  <style>
+    /* 1. Declare global variables inside the :root pseudo-class */
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2ecc71;
+      --dark-text: #2c3e50;
+      --main-padding: 20px;
+      --border-radius: 8px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--dark-text);
+      padding: var(--main-padding);
+    }
+
+    /* 2. Use the variables with the var() function */
+    .card {
+      border: 2px solid var(--primary-color);
+      padding: var(--main-padding);
+      border-radius: var(--border-radius);
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 10px var(--main-padding);
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+    }
+    
+    /* Fallback value example: uses 'red' if --accent-color is missing */
+    .alert {
+      color: var(--accent-color, red); 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Card Title</h2>
+    <p>This card uses global CSS variables for its border, padding, and rounded corners.</p>
+    <button class="btn">Click Me</button>
+  </div>
+
+  <p class="alert">This text will be red because --accent-color was never defined.</p>
+
+</body>
+</html>
