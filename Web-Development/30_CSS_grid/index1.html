@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete CSS Grid Layout Example</title>
+    <style>
+        /* Base Reset & Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* 1. THE GRID CONTAINER */
+        .grid-container {
+            display: grid;
+            
+            /* Defines 3 columns: 
+               - Sidebar (250px wide)
+               - Main content (takes up remaining flexible fraction space)
+               - Ad/Info panel (200px wide) */
+            grid-template-columns: 250px 1fr 200px;
+            
+            /* Defines 3 rows: 
+               - Header (auto-sizes to content)
+               - Main content section (min height of 400px, expands with content)
+               - Footer (auto-sizes to content) */
+            grid-template-rows: auto minmax(400px, auto) auto;
+            
+            /* Adds a 15px gap between all rows and columns */
+            gap: 15px;
+            
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Generic styling for all grid items */
+        .grid-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* 2. THE GRID ITEMS (Positioning) */
+        
+        .header {
+            /* Spans from column line 1 to 4 (across all 3 columns) */
+            grid-column: 1 / 4; 
+            background-color: #1e3a8a;
+            color: white;
+            height: 80px;
+        }
+
+        .sidebar {
+            /* Stays in the first column track by default */
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .main-content {
+            /* Stays in the middle column track */
+            background-color: #e0f2fe;
+            color: #0369a1;
+            font-weight: normal;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .right-panel {
+            /* Stays in the third column track */
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        .footer {
+            /* Spans from column line 1 to 4 (across all 3 columns) */
+            grid-column: 1 / 4;
+            background-color: #1f2937;
+            color: white;
+            padding: 15px;
+        }
+
+        /* 3. RESPONSIVE DESIGN (Media Query) */
+        /* Rearranges the layout into a single vertical column on mobile screens */
+        @media (max-width: 768px) {
+            .grid-container {
+                /* Overrides columns to stack everything vertically */
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .header, .sidebar, .main-content, .right-panel, .footer {
+                /* Forces every element to span across the single full-width column */
+                grid-column: 1 / -1; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Grid Container -->
+    <div class="grid-container">
+        
+        <!-- Grid Items -->
+        <header class="grid-item header">
+            Header Area (Spans 3 Columns)
+        </header>
+        
+        <aside class="grid-item sidebar">
+            Left Sidebar
+        </aside>
+        
+        <main class="grid-item main-content">
+            <h2>Main Content Area</h2>
+            <p style="margin-top: 10px; font-size: 0.95rem;">
+                This layout automatically shifts to a stacked single-column design when the screen width drops below 768px.
+            </p>
+        </main>
+        
+        <aside class="grid-item right-panel">
+            Right Panel
+        </aside>
+        
+        <footer class="grid-item footer">
+            Footer Area (Spans 3 Columns)
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+<!-- Key Grid Features Used Here:
+    • display: grid: Declared on the parent wrappers to turn immediate children elements into grid tracks.
+    • grid-template-areas: An intuitive mapping system using human-readable strings to layout complex templates.
+    • repeat(auto-fit, minmax(200px, 1fr)): Perfect for component UI (like product grids or photo albums). It
+    dynamically calculates space allocations so elements wrap natively without media queries. -->
