@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why use Tailwind CSS</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <nav class="bg-blue-900 text-blue-400 flex justify-between">
+        <span class="text-xl flex items-center mx-3 font-bold hover:text-blue-300">Why Use TailwindCSS</span>
+        <ul class="px-28 py-4 flex space-x-11 justify-end">
+            <li class="cursor-pointer hover:text-white">Home</li>
+            <li class="cursor-pointer hover:text-white">About</li>
+            <li class="cursor-pointer hover:text-white">Contact</li>
+        </ul>
+    </nav>
+    <main class="m-0 p-0 bg-blue-100 justify-around h-150">
+        <div class="mx-2 p-2">
+            <p>
+                Tailwind CSS has become an industry favorite because it solves the scaling and maintenance issues
+                inherent
+                to
+                traditional CSS. Instead of writing custom stylesheets, you style elements directly in your HTML or JSX
+                using small,
+                single-purpose utility classes (e.g., flex, pt-4, text-blue-500).</p>
+        </div><br><br>
+        <h2 class="mx-2 p-2 py-0">Core Benefits:</h2>
+        <div class="mx-4 p-2">
+            <p>
+                • No More Naming Fatigue: You no longer need to spend time inventing arbitrary class names like
+                card-container-inner-wrapper just to apply a few styles.</p>
+            <p>
+                • Zero Context Switching: You can build entire interfaces without constantly jumping back and forth
+                between
+                HTML
+                and
+                separate CSS files.</p>
+            <p>
+                • CSS That Scales Safely: In traditional CSS, as a codebase grows, stylesheets often become bloated and
+                terrifying
+                to change because you might accidentally break a layout elsewhere. With Tailwind, styles are tightly
+                coupled
+                to
+                the
+                component—deleting a component automatically deletes its styling.</p>
+            <p>
+                • Excellent Performance: Tailwind uses a compiler to scan your code and outputs a production file
+                containing
+                only
+                the CSS you actually used. This keeps production bundles incredibly small and fast.</p>
+            <p>
+                • Built-in Constraints: Tailwind provides a pre-configured design system out of the box with consistent
+                spacing,
+                sizing, and curated color palettes. This ensures your UI remains visually cohesive without endless
+                guesswork.</p>
+            <p>
+                • Simplified Responsiveness & Dark Mode: Rather than writing complex media queries, you append prefixes
+                like
+                md:
+                or
+                dark: directly to your existing utility classes (e.g., md:text-lg dark:bg-black).</p>
+        </div>
+        <a href="https://tailwindcss.com/docs/installation/using-vite"
+            class="inline-block bg-blue-800 text-white hover:bg-blue-500 hover:text-blue-100 m-4 px-4 py-2 cursor-pointer rounded-2xl">
+            Enter
+        </a>
+        <div class="w-1/2 flex ml-6">
+        <img src="tailwindCss_Setup.png" alt="SetUP" class="h-110 mx-3 p-4">
+        </div>
+</body>
+
+</html>
