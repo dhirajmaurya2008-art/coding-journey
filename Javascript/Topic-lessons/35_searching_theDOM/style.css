@@ -1,0 +1,52 @@
+body{
+    background-color: aquamarine;
+}
+
+
+.container{
+    margin: 10px;
+    padding: 10px;
+}
+
+.container{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.my_btn {
+  display: inline-block;
+  background-color: #1d3557;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.my_btn:hover {
+  background-color: #fdf8f8;
+  color: #000000;
+}
+
+
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.card {
+  flex: 1;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.card:hover {
+  flex: 3;
+  background: rgb(92, 33, 77);
+}
+
