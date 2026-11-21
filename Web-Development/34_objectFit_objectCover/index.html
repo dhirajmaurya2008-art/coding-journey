@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objectFit position</title>
+    <style>
+        .container {
+            height: 80vh;
+            width: 80wh;
+            border: 2px solid black;
+            /* background-color: azure; */
+            background-position: center center;
+            background-clip: border-box;
+
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpQQJkX4QxVH-28D1eFJ_RP7evdCNcec4wTA9wDIUwlw&s=10");
+            background-repeat: no-repeat;
+        }
+
+        img {
+            width: 466px;
+            height: 488px;
+            object-fit: contain;
+            /* object-fit: fill; */
+            object-position: 10px 20px;
+            /* object-position: bottom right; */
+            /* object-fit: contain; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+    </div>
+</body>
+
+</html>
