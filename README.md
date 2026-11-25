@@ -1,5 +1,5 @@
 # coding-journey
-My programming learning journey  — practicing C, C++, Java, DSA, problem-solving  while continuously improving my software development skills.
+My programming learning journey  — practicing C, C++, Java, problem-solving  while continuously improving my software development skills.
 
 # Learning Journey
 This repository contains my learning and development journey as I work toward becoming a Software Developer.
